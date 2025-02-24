@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 tRNA Fragment Analyzer - Usage Example
 
@@ -352,6 +353,7 @@ results = analyzer.analyze(
     reference_file='/Users/chenyimin/PycharmProjects/rna-seq-test/Copy of tRNA_DB_Combined_v3.xlsx',
     reference_sheet='Sheet2'
 )
+
 
 stats = analyzer.get_summary_stats()
 analyzer.export_results_to_excel('/Users/chenyimin/PycharmProjects/rna-seq-test/analysis_results.xlsx')

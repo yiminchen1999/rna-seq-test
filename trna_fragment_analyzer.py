@@ -22,37 +22,31 @@ from typing import Dict, List, Tuple, Optional, Any, Union
 # Define nucleotide mass constants
 NUCLEOTIDE_MASSES = {
     # Standard nucleotides
-    'A': 347.2212,
-    'U': 324.1813,
-    'G': 363.2206,
-    'C': 323.1965,
+    'A': 329.0525,
+    'U': 306.0253,
+    'G': 345.0474,
+    'C': 305.0413,
 
-    # Modified nucleotides commonly found in tRNA
-    'I': 348.2233,  # Inosine
-    'Ψ': 324.1813,  # Pseudouridine (same mass as U)
-    'm1A': 361.2478,  # 1-methyladenosine
-    'm2G': 377.2472,  # N2-methylguanosine
-    'D': 325.1773,  # Dihydrouridine
-    'R': 347.2212,  # Purine (A or G) - using A mass as approximation
-    'Y': 324.1813,  # Pyrimidine (C, U) - using U mass as approximation
-    'N': 339.6799,  # Any nucleotide (average mass)
-    'J': 361.2478,  # Modified A
-    'L': 347.2212,  # Modified A
-    'O': 363.2206,  # Modified G
-    'P': 363.2206,  # Modified G
-    '7': 377.2472,  # Modified G
-    '#': 363.2206,  # Modified G
-    '"': 323.1965,  # Modified C
-    'K': 324.1813,  # Modified U
-    'B': 325.1773,  # Modified U
-    'M': 323.1965,  # Modified C
-    'H': 325.1773,  # Modified U
+    # Modified nucleotides
+    'D': 308.04095,  # Dihydrouridine
+    'c': 319.05694,  # Modified C
+    'u': 320.04095,  # Modified U
+    'a': 343.06817,  # Modified A
+    'g': 359.06308,  # Modified G
+    '4': 322.00246,  # Modified nucleotide
+    '*': 443.10284,  # Modified nucleotide
+    'X': 407.07298,  # Modified nucleotide
+    '+': 397.11512,  # Modified nucleotide
+    'x': 949.30298,  # Modified nucleotide
+    'f': 1034.261709,  # Modified nucleotide
+    'R': 373.07873,  # Modified nucleotide
+    'y': 212.007  # Modified nucleotide
 }
 
-# Average mass for unknown modifications
+# For the average mass and water mass, if you want to keep those constants,
+# you can retain them from the original code:
 AVERAGE_NUCLEOTIDE_MASS = 339.6799
 WATER_MASS = 18.0106
-
 
 def calculate_rna_mass(sequence: str, include_terminal: str = 'CCA') -> float:
     """
