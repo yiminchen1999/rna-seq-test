@@ -43,8 +43,7 @@ NUCLEOTIDE_MASSES = {
     'y': 212.007  # Modified nucleotide
 }
 
-# For the average mass and water mass, if you want to keep those constants,
-# you can retain them from the original code:
+
 AVERAGE_NUCLEOTIDE_MASS = 339.6799
 WATER_MASS = 18.0106
 
